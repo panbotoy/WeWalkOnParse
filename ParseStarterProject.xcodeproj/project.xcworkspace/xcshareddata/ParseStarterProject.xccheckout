@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>604888E9-72F9-4EDA-AD27-A9B8C9C104B4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ParseStarterProject</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>43A9BFCE-C5C0-440A-919F-08DE7926B5BC</key>
+		<string>ssh://github.com/facebook/facebook-ios-sdk.git</string>
+		<key>93B1019E6BEC8D74051F62C50421BC13465C371C</key>
+		<string>ssh://github.com/hungrylabs/hungry.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ios-client/ParseStarterProject/ParseStarterProject.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>43A9BFCE-C5C0-440A-919F-08DE7926B5BC</key>
+		<string>../../../../../facebook-ios-sdk</string>
+		<key>93B1019E6BEC8D74051F62C50421BC13465C371C</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/hungrylabs/hungry.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>93B1019E6BEC8D74051F62C50421BC13465C371C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>43A9BFCE-C5C0-440A-919F-08DE7926B5BC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>facebook-ios-sdk</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>93B1019E6BEC8D74051F62C50421BC13465C371C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Parse</string>
+		</dict>
+	</array>
+</dict>
+</plist>
