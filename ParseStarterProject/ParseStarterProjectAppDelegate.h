@@ -15,4 +15,6 @@
 
 @property (nonatomic, strong) IBOutlet ParseStarterProjectViewController *viewController;
 
+@property (nonatomic, strong) UINavigationController *navigationController;
+
 @end
