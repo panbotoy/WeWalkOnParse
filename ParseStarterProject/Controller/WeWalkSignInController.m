@@ -35,8 +35,16 @@ WeWalkSignInControllerDelegate>
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     
+    [nc addObserver:self selector:@selector(keyboardWillShow:) name:
+     UIKeyboardWillShowNotification object:nil];
+    
+    [nc addObserver:self selector:@selector(keyboardWillHide:) name:
+     UIKeyboardWillHideNotification object:nil];
+    
+    self.tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                action:@selector(didTapAnywhere:)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,10 +57,32 @@ WeWalkSignInControllerDelegate>
 #pragma mark Actions
 
 - (IBAction)signInButtonPressed:(UIButton *)sender {
-    PFObject *user = [PFObject objectWithClassName: @"WeWalkUser"];
-    user[@"username"] = @"panbo";
-    user[@"password"] = @"123";
-    [user saveInBackground];
+    // Commented out code for store a user in Parse. Left for future.
+//    PFObject *user = [PFObject objectWithClassName: @"WeWalkUser"];
+//    user[@"username"] = @"panbo";
+//    user[@"password"] = @"123";
+//    [user saveInBackground];
+    NSString *username = self.usernameField.text;
+    NSString *password = self.passwordField.text;
+    NSString *usernamePredicate = @"username = '";
+    usernamePredicate = [usernamePredicate stringByAppendingString: username];
+    usernamePredicate = [usernamePredicate stringByAppendingString: @"'"];
+    NSPredicate *loginPredicate = [NSPredicate predicateWithFormat: usernamePredicate];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"WeWalkUser" predicate:loginPredicate];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *currentUser, NSError *error) {
+        if (!currentUser) {
+            NSLog(@"User not registered!");
+        } else {
+            // The find succeeded.
+            if ([password isEqualToString: currentUser[@"password"]]){
+                NSLog(@"Successfully logged in!");
+            }
+            else {
+                NSLog(@"Incorrect password! Try again!");
+            }
+        }
+    }];
 }
 
 -(void) keyboardWillShow:(NSNotification *) note {
