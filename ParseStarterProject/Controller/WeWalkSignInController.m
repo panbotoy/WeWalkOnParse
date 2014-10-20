@@ -7,6 +7,7 @@
 //
 
 #import "WeWalkSignInController.h"
+#import "WeWalkNewUserControllerViewController.h"
 #import <Parse/Parse.h>
 
 @interface WeWalkSignInController ()
