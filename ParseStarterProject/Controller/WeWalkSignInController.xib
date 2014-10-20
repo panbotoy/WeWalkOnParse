@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeWalkSignInController">
             <connections>
                 <outlet property="loginButton" destination="fZ4-nN-IAF" id="cd0-WI-bUh"/>
                 <outlet property="passwordField" destination="jeU-yY-aw1" id="SCk-5h-F3C"/>
+                <outlet property="signupButton" destination="SE8-pf-Di3" id="fza-Mh-YcT"/>
                 <outlet property="usernameField" destination="57Z-4z-PwV" id="Gqo-Tu-4rP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -42,14 +44,26 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZ4-nN-IAF">
-                    <rect key="frame" x="0.0" y="320" width="320" height="60"/>
-                    <color key="backgroundColor" red="1" green="0.50588235294117645" blue="0.19607843137254902" alpha="1" colorSpace="deviceRGB"/>
+                    <rect key="frame" x="98" y="308" width="125" height="60"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                     <state key="normal" title="Sign In">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="signInButtonPressed:" destination="-1" eventType="touchUpInside" id="kuB-Pb-kU3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SE8-pf-Di3">
+                    <rect key="frame" x="0.0" y="406" width="320" height="60"/>
+                    <color key="backgroundColor" red="1" green="0.50588235290000005" blue="0.1960784314" alpha="1" colorSpace="deviceRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" title="Sign up">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="signInButtonPressed:" destination="-1" eventType="touchUpInside" id="1cl-Ve-QRb"/>
+                        <action selector="signUpButtonPressed:" destination="-1" eventType="touchUpInside" id="zlv-AA-Gui"/>
                     </connections>
                 </button>
             </subviews>
@@ -59,9 +73,4 @@
     <resources>
         <image name="orange_banner@1x" width="320" height="140"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>
