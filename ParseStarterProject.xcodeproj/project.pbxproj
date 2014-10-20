@@ -27,6 +27,9 @@
 		5506752319F4BF7400BBFBA7 /* WeWalkSignInController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5506752119F4BF7400BBFBA7 /* WeWalkSignInController.m */; };
 		5506752419F4BF7400BBFBA7 /* WeWalkSignInController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5506752219F4BF7400BBFBA7 /* WeWalkSignInController.xib */; };
 		5506752719F4C34100BBFBA7 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5506752619F4C34100BBFBA7 /* Image.xcassets */; };
+		5506752A19F4E2C700BBFBA7 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5506752919F4E2C700BBFBA7 /* User.m */; };
+		5506753819F4E3EF00BBFBA7 /* WeWalkDataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5506753719F4E3EF00BBFBA7 /* WeWalkDataAccessor.m */; };
+		5506753B19F4E41200BBFBA7 /* UserDataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5506753A19F4E41200BBFBA7 /* UserDataAccessor.m */; };
 		743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743D7B6C157DA60100084B67 /* CoreGraphics.framework */; };
 		817AD67C196B009E0014C796 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 817AD67B196B009E0014C796 /* Bolts.framework */; };
 		81DDFD1919B4A60300BE649C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DDFD1719B4A60300BE649C /* Parse.framework */; };
@@ -64,6 +67,12 @@
 		5506752119F4BF7400BBFBA7 /* WeWalkSignInController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeWalkSignInController.m; path = Controller/WeWalkSignInController.m; sourceTree = "<group>"; };
 		5506752219F4BF7400BBFBA7 /* WeWalkSignInController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WeWalkSignInController.xib; path = Controller/WeWalkSignInController.xib; sourceTree = "<group>"; };
 		5506752619F4C34100BBFBA7 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Image.xcassets; path = Image/Image.xcassets; sourceTree = "<group>"; };
+		5506752819F4E2C700BBFBA7 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User.h; sourceTree = "<group>"; };
+		5506752919F4E2C700BBFBA7 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User.m; sourceTree = "<group>"; };
+		5506753619F4E3EF00BBFBA7 /* WeWalkDataAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeWalkDataAccessor.h; path = Model/WeWalkDataAccessor.h; sourceTree = "<group>"; };
+		5506753719F4E3EF00BBFBA7 /* WeWalkDataAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeWalkDataAccessor.m; path = Model/WeWalkDataAccessor.m; sourceTree = "<group>"; };
+		5506753919F4E41200BBFBA7 /* UserDataAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDataAccessor.h; path = Model/UserDataAccessor.h; sourceTree = "<group>"; };
+		5506753A19F4E41200BBFBA7 /* UserDataAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDataAccessor.m; path = Model/UserDataAccessor.m; sourceTree = "<group>"; };
 		6332375315E438E900AE2736 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		6372FF521613CC3C002132AF /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		6372FF551613CC42002132AF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -153,6 +162,7 @@
 				09ABC08013A1D52D009C3FCF /* ParseStarterProjectAppDelegate.h */,
 				09ABC08113A1D52D009C3FCF /* ParseStarterProjectAppDelegate.m */,
 				09ABC08313A1D52D009C3FCF /* MainWindow.xib */,
+				5506752C19F4E2E600BBFBA7 /* Model */,
 				5506752519F4BF7A00BBFBA7 /* Controller */,
 				09ABC07813A1D52D009C3FCF /* Supporting Files */,
 			);
@@ -186,6 +196,35 @@
 				09ABC08713A1D52E009C3FCF /* ParseStarterProjectViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		5506752C19F4E2E600BBFBA7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5506753219F4E35400BBFBA7 /* DataAccessor */,
+				5506752D19F4E31500BBFBA7 /* Class */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5506752D19F4E31500BBFBA7 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				5506752819F4E2C700BBFBA7 /* User.h */,
+				5506752919F4E2C700BBFBA7 /* User.m */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
+		5506753219F4E35400BBFBA7 /* DataAccessor */ = {
+			isa = PBXGroup;
+			children = (
+				5506753619F4E3EF00BBFBA7 /* WeWalkDataAccessor.h */,
+				5506753719F4E3EF00BBFBA7 /* WeWalkDataAccessor.m */,
+				5506753919F4E41200BBFBA7 /* UserDataAccessor.h */,
+				5506753A19F4E41200BBFBA7 /* UserDataAccessor.m */,
+			);
+			name = DataAccessor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,10 +296,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5506752A19F4E2C700BBFBA7 /* User.m in Sources */,
 				09ABC07F13A1D52D009C3FCF /* main.m in Sources */,
 				09ABC08213A1D52D009C3FCF /* ParseStarterProjectAppDelegate.m in Sources */,
+				5506753819F4E3EF00BBFBA7 /* WeWalkDataAccessor.m in Sources */,
 				5506752319F4BF7400BBFBA7 /* WeWalkSignInController.m in Sources */,
 				09ABC08813A1D52E009C3FCF /* ParseStarterProjectViewController.m in Sources */,
+				5506753B19F4E41200BBFBA7 /* UserDataAccessor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
