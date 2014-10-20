@@ -15,6 +15,7 @@ UIScrollViewDelegate,
 WeWalkSignInControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIButton *loginButton;
+@property (strong, nonatomic) UITapGestureRecognizer *tapRecognizer;
 
 @end
 
@@ -52,6 +53,20 @@ WeWalkSignInControllerDelegate>
     user[@"username"] = @"panbo";
     user[@"password"] = @"123";
     [user saveInBackground];
+}
+
+-(void) keyboardWillShow:(NSNotification *) note {
+    [self.view addGestureRecognizer:self.tapRecognizer];
+}
+
+-(void) keyboardWillHide:(NSNotification *) note
+{
+    [self.view removeGestureRecognizer:self.tapRecognizer];
+}
+
+-(void)didTapAnywhere: (UITapGestureRecognizer*) recognizer {
+    [self.usernameField resignFirstResponder];
+    [self.passwordField resignFirstResponder];
 }
 
 @end
