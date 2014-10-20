@@ -9,7 +9,7 @@
 
 @class ParseStarterProjectViewController;
 
-@interface ParseStarterProjectAppDelegate : NSObject <UIApplicationDelegate>
+@interface ParseStarterProjectAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (nonatomic, strong) IBOutlet UIWindow *window;
 

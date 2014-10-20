@@ -7,6 +7,7 @@
 //
 
 #import "WeWalkSignInController.h"
+#import <Parse/Parse.h>
 
 @interface WeWalkSignInController ()
 <UITextFieldDelegate,
@@ -34,6 +35,7 @@ WeWalkSignInControllerDelegate>
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,8 +48,10 @@ WeWalkSignInControllerDelegate>
 #pragma mark Actions
 
 - (IBAction)signInButtonPressed:(UIButton *)sender {
-    
-    
+    PFObject *user = [PFObject objectWithClassName: @"WeWalkUser"];
+    user[@"username"] = @"panbo";
+    user[@"password"] = @"123";
+    [user saveInBackground];
 }
 
 @end
