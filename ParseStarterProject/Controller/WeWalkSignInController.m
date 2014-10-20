@@ -7,6 +7,7 @@
 //
 
 #import "WeWalkSignInController.h"
+#import "WeWalkNewUserControllerViewController.h"
 
 @interface WeWalkSignInController ()
 <UITextFieldDelegate,
@@ -15,6 +16,7 @@ WeWalkSignInControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIButton *loginButton;
 @property (strong, nonatomic) UITapGestureRecognizer *tapRecognizer;
+@property (strong, nonatomic) IBOutlet UIButton *signupButton;
 
 @end
 
@@ -60,6 +62,11 @@ WeWalkSignInControllerDelegate>
     
 }
 
+- (IBAction)signUpButtonPressed:(UIButton *)sender {
+    [self presentNewUserViewController];
+}
+
+
 -(void) keyboardWillShow:(NSNotification *) note {
     [self.view addGestureRecognizer:self.tapRecognizer];
 }
@@ -72,6 +79,12 @@ WeWalkSignInControllerDelegate>
 -(void)didTapAnywhere: (UITapGestureRecognizer*) recognizer {
     [self.usernameField resignFirstResponder];
     [self.passwordField resignFirstResponder];
+}
+
+- (void)presentNewUserViewController {
+    WeWalkNewUserControllerViewController *viewController = [[WeWalkNewUserControllerViewController alloc] initWithNibName:nil bundle:nil];
+    viewController.delegate = self;
+    [self.navigationController presentViewController:viewController animated:YES completion:nil];
 }
 
 @end
