@@ -13,6 +13,7 @@
 @interface WeWalkSignInController ()
 <UITextFieldDelegate,
 UIScrollViewDelegate,
+WeWalkNewUserControllerViewControllerDelegate,
 WeWalkSignInControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIButton *loginButton;
@@ -107,9 +108,9 @@ WeWalkSignInControllerDelegate>
 }
 
 - (void)presentNewUserViewController {
-    WeWalkNewUserControllerViewController *viewController = [[WeWalkNewUserControllerViewController alloc] initWithNibName:nil bundle:nil];
-    viewController.delegate = self;
-    [self.navigationController presentViewController:viewController animated:YES completion:nil];
+    WeWalkNewUserControllerViewController *newViewController = [[WeWalkNewUserControllerViewController alloc] initWithNibName:nil bundle:nil];
+    newViewController.delegate = self;
+    [self.navigationController presentViewController:newViewController animated:YES completion:nil];
 }
 
 @end

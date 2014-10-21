@@ -62,7 +62,6 @@
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                     </state>
                     <connections>
-                        <action selector="signInButtonPressed:" destination="-1" eventType="touchUpInside" id="1cl-Ve-QRb"/>
                         <action selector="signUpButtonPressed:" destination="-1" eventType="touchUpInside" id="zlv-AA-Gui"/>
                     </connections>
                 </button>
