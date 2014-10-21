@@ -10,6 +10,9 @@
 #import "WeWalkNewUserControllerViewController.h"
 #import <Parse/Parse.h>
 
+#import "UserDataAccessor.h"
+#import "ParseUserDataAccessor.h"
+
 @interface WeWalkSignInController ()
 <UITextFieldDelegate,
 UIScrollViewDelegate,
@@ -67,25 +70,12 @@ WeWalkSignInControllerDelegate>
 //    [user saveInBackground];
     NSString *username = self.usernameField.text;
     NSString *password = self.passwordField.text;
-    NSString *usernamePredicate = @"username = '";
-    usernamePredicate = [usernamePredicate stringByAppendingString: username];
-    usernamePredicate = [usernamePredicate stringByAppendingString: @"'"];
-    NSPredicate *loginPredicate = [NSPredicate predicateWithFormat: usernamePredicate];
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"WeWalkUser" predicate:loginPredicate];
-    [query getFirstObjectInBackgroundWithBlock:^(PFObject *currentUser, NSError *error) {
-        if (!currentUser) {
-            NSLog(@"User not registered!");
-        } else {
-            // The find succeeded.
-            if ([password isEqualToString: currentUser[@"password"]]){
-                NSLog(@"Successfully logged in!");
-            }
-            else {
-                NSLog(@"Incorrect password! Try again!");
-            }
-        }
-    }];
+    UserDataAccessor * da = [[ParseUserDataAccessor alloc] init];
+    if (![da loginWithUsername:username Password:password]){
+        NSLog(@"Login failed! Please check username and password!");
+    } else {
+        NSLog(@"Successfully logged in!");
+    }
 }
 
 - (IBAction)signUpButtonPressed:(UIButton *)sender {

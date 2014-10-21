@@ -7,7 +7,15 @@
 //
 
 #import "WeWalkDataAccessor.h"
+#import "UserDataAccessorProtocol.h"
+#import "User.h"
 
-@interface UserDataAccessor : WeWalkDataAccessor
+@interface UserDataAccessor : NSObject <UserDataAccessorProtocol>
+
+-(User *) getUserWithUsername:(NSString *)username;
+
+-(BOOL) loginWithUsername:(NSString *) username Password:(NSString *) password;
+
+-(BOOL) signupUser:(User *) user;
 
 @end
