@@ -5,7 +5,7 @@
 //  Created by Stella Mao on 10/19/14.
 //
 //
-//  "Abstract" super class 
+//  "Abstract" super "interface"
 
 #import <Foundation/Foundation.h>
 

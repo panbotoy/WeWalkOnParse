@@ -44,12 +44,12 @@
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
 
     // Override point for customization after application launch.
-    
+  /*
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:[[UIViewController alloc] init]];
     [self presentLoginViewController];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = self.navigationController;
-    [self.window makeKeyAndVisible];
+    [self.window makeKeyAndVisible]; */
 
 //    self.window.rootViewController = self.viewController;
 //    [self.window makeKeyAndVisible];
