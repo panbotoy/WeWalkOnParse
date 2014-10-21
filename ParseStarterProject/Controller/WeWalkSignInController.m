@@ -70,6 +70,11 @@ WeWalkSignInControllerDelegate>
 //    [user saveInBackground];
     NSString *username = self.usernameField.text;
     NSString *password = self.passwordField.text;
+    
+    /***
+     TODO: We here initiates a data accessor. which may not be a good approach
+     Another problem is that the ParseUserDataAccessor is in the code. Need to make it configurable.
+     ***/
     UserDataAccessor * da = [[ParseUserDataAccessor alloc] init];
     if (![da loginWithUsername:username Password:password]){
         NSLog(@"Login failed! Please check username and password!");

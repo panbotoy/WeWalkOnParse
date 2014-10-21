@@ -21,6 +21,12 @@
     PFQuery *query = [PFQuery queryWithClassName:@"WeWalkUser" predicate:loginPredicate];
     
     User *user = [[User alloc] init];
+    /**
+     TODO:  Here we are using a synchrous call. It will give a warning that the main thread is waiting.
+     
+     I think this is probably not a good approach
+     
+     ***/
 //    [query getFirstObject:^(PFObject *currentUser, NSError *error) {
 //        if (!currentUser) {
 //            NSLog(@"User not registered!");
