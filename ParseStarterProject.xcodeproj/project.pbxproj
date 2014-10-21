@@ -22,6 +22,7 @@
 		09ABC08813A1D52E009C3FCF /* ParseStarterProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ABC08713A1D52E009C3FCF /* ParseStarterProjectViewController.m */; };
 		09ABC08B13A1D52E009C3FCF /* ParseStarterProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09ABC08913A1D52E009C3FCF /* ParseStarterProjectViewController.xib */; };
 		09BEF34C13D51C3F001BBCDB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BEF34B13D51C3F001BBCDB /* Security.framework */; };
+		0A58E50319F63D5A006A8E67 /* ParseUserDataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A58E50219F63D5A006A8E67 /* ParseUserDataAccessor.m */; };
 		2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCDD6AF14A573F500295AAC /* QuartzCore.framework */; };
 		4998650515BF305000803E05 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4998650415BF305000803E05 /* StoreKit.framework */; };
 		5506752319F4BF7400BBFBA7 /* WeWalkSignInController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5506752119F4BF7400BBFBA7 /* WeWalkSignInController.m */; };
@@ -64,6 +65,9 @@
 		09ABC08713A1D52E009C3FCF /* ParseStarterProjectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseStarterProjectViewController.m; sourceTree = "<group>"; };
 		09ABC08A13A1D52E009C3FCF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ParseStarterProjectViewController.xib; sourceTree = "<group>"; };
 		09BEF34B13D51C3F001BBCDB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0A58E4FF19F63BEF006A8E67 /* UserDataAccessorProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDataAccessorProtocol.h; sourceTree = "<group>"; };
+		0A58E50119F63D5A006A8E67 /* ParseUserDataAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseUserDataAccessor.h; sourceTree = "<group>"; };
+		0A58E50219F63D5A006A8E67 /* ParseUserDataAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseUserDataAccessor.m; sourceTree = "<group>"; };
 		2FCDD6AF14A573F500295AAC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4998650415BF305000803E05 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		5506752019F4BF7400BBFBA7 /* WeWalkSignInController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeWalkSignInController.h; path = Controller/WeWalkSignInController.h; sourceTree = "<group>"; };
@@ -193,6 +197,32 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0A58E4FE19F63B10006A8E67 /* DataAccessorProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				0A58E4FF19F63BEF006A8E67 /* UserDataAccessorProtocol.h */,
+			);
+			name = DataAccessorProtocols;
+			sourceTree = "<group>";
+		};
+		0A58E50019F63D0F006A8E67 /* ParseDataAccessors */ = {
+			isa = PBXGroup;
+			children = (
+				0A58E50119F63D5A006A8E67 /* ParseUserDataAccessor.h */,
+				0A58E50219F63D5A006A8E67 /* ParseUserDataAccessor.m */,
+			);
+			name = ParseDataAccessors;
+			sourceTree = "<group>";
+		};
+		0A58E50419F642FE006A8E67 /* AbstractDataAccessors */ = {
+			isa = PBXGroup;
+			children = (
+				5506753919F4E41200BBFBA7 /* UserDataAccessor.h */,
+				5506753A19F4E41200BBFBA7 /* UserDataAccessor.m */,
+			);
+			name = AbstractDataAccessors;
+			sourceTree = "<group>";
+		};
 		5506752519F4BF7A00BBFBA7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,8 +260,6 @@
 				5545B42D19F631AE003215C7 /* ParseDataAccessorImplementation */,
 				5506753619F4E3EF00BBFBA7 /* WeWalkDataAccessor.h */,
 				5506753719F4E3EF00BBFBA7 /* WeWalkDataAccessor.m */,
-				5506753919F4E41200BBFBA7 /* UserDataAccessor.h */,
-				5506753A19F4E41200BBFBA7 /* UserDataAccessor.m */,
 			);
 			name = DataAccessor;
 			sourceTree = "<group>";
@@ -328,6 +356,7 @@
 				5506752A19F4E2C700BBFBA7 /* User.m in Sources */,
 				554CD5F019F4E8A800A37513 /* WeWalkNewUserControllerViewController.m in Sources */,
 				09ABC07F13A1D52D009C3FCF /* main.m in Sources */,
+				0A58E50319F63D5A006A8E67 /* ParseUserDataAccessor.m in Sources */,
 				09ABC08213A1D52D009C3FCF /* ParseStarterProjectAppDelegate.m in Sources */,
 				5506753819F4E3EF00BBFBA7 /* WeWalkDataAccessor.m in Sources */,
 				5506752319F4BF7400BBFBA7 /* WeWalkSignInController.m in Sources */,
