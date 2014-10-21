@@ -257,7 +257,9 @@
 		5506753219F4E35400BBFBA7 /* DataAccessor */ = {
 			isa = PBXGroup;
 			children = (
-				5545B42D19F631AE003215C7 /* ParseDataAccessorImplementation */,
+				0A58E50419F642FE006A8E67 /* AbstractDataAccessors */,
+				0A58E50019F63D0F006A8E67 /* ParseDataAccessors */,
+				0A58E4FE19F63B10006A8E67 /* DataAccessorProtocols */,
 				5506753619F4E3EF00BBFBA7 /* WeWalkDataAccessor.h */,
 				5506753719F4E3EF00BBFBA7 /* WeWalkDataAccessor.m */,
 			);
