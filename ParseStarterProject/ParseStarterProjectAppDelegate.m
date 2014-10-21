@@ -11,8 +11,13 @@
 // #import <ParseFacebookUtils/PFFacebookUtils.h>
 
 #import "ParseStarterProjectAppDelegate.h"
-#import "ParseStarterProjectViewController.h"
 #import "WeWalkSignInController.h"
+
+@interface ParseStarterProjectAppDelegate()
+<WeWalkSignInControllerDelegate>
+
+@end
+
 
 @implementation ParseStarterProjectAppDelegate
 
@@ -101,6 +106,11 @@
     WeWalkSignInController *viewController = [[WeWalkSignInController alloc] initWithNibName:nil bundle:nil];
     viewController.delegate = self;
     [self.navigationController setViewControllers:@[ viewController ] animated:NO];
+}
+
+- (void)loginViewControllerDidLogin:(WeWalkSignInController *)controller {
+    //TODO:complete
+    
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken {

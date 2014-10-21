@@ -166,9 +166,10 @@
 			children = (
 				09ABC08013A1D52D009C3FCF /* ParseStarterProjectAppDelegate.h */,
 				09ABC08113A1D52D009C3FCF /* ParseStarterProjectAppDelegate.m */,
-				09ABC08313A1D52D009C3FCF /* MainWindow.xib */,
+				5545B42C19F6231A003215C7 /* xib */,
 				5506752C19F4E2E600BBFBA7 /* Model */,
 				5506752519F4BF7A00BBFBA7 /* Controller */,
+				5506752619F4C34100BBFBA7 /* Image.xcassets */,
 				09ABC07813A1D52D009C3FCF /* Supporting Files */,
 			);
 			path = ParseStarterProject;
@@ -177,9 +178,6 @@
 		09ABC07813A1D52D009C3FCF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				554CD5EF19F4E8A800A37513 /* WeWalkNewUserControllerViewController.xib */,
-				09ABC08913A1D52E009C3FCF /* ParseStarterProjectViewController.xib */,
-				5506752219F4BF7400BBFBA7 /* WeWalkSignInController.xib */,
 				C4C51B541613CE0800959FDC /* Default.png */,
 				C4C51B561613CE0800959FDC /* Default@2x.png */,
 				C4C51B551613CE0800959FDC /* Default-568h@2x.png */,
@@ -188,7 +186,6 @@
 				09ABC07A13A1D52D009C3FCF /* InfoPlist.strings */,
 				09ABC07D13A1D52D009C3FCF /* ParseStarterProject-Prefix.pch */,
 				09ABC07E13A1D52D009C3FCF /* main.m */,
-				5506752619F4C34100BBFBA7 /* Image.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -233,6 +230,17 @@
 				5506753A19F4E41200BBFBA7 /* UserDataAccessor.m */,
 			);
 			name = DataAccessor;
+			sourceTree = "<group>";
+		};
+		5545B42C19F6231A003215C7 /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				09ABC08313A1D52D009C3FCF /* MainWindow.xib */,
+				5506752219F4BF7400BBFBA7 /* WeWalkSignInController.xib */,
+				554CD5EF19F4E8A800A37513 /* WeWalkNewUserControllerViewController.xib */,
+				09ABC08913A1D52E009C3FCF /* ParseStarterProjectViewController.xib */,
+			);
+			name = xib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
