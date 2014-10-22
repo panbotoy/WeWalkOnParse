@@ -82,7 +82,13 @@
 //                                                         UIRemoteNotificationTypeAlert |
 //                                                         UIRemoteNotificationTypeSound)];
 //    }
-
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"WeWalk" bundle:[NSBundle mainBundle]];
+    UIViewController *vc = [storyboard instantiateInitialViewController];
+    
+    // Set root view controller and make windows visible
+    self.window.rootViewController = vc;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
