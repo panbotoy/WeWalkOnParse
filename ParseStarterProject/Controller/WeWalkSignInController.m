@@ -84,7 +84,7 @@ WeWalkSignInControllerDelegate>
 }
 
 - (IBAction)signUpButtonPressed:(UIButton *)sender {
-    [self presentNewUserViewController];
+    //[self presentNewUserViewController];
 }
 
 
@@ -102,10 +102,10 @@ WeWalkSignInControllerDelegate>
     [self.passwordField resignFirstResponder];
 }
 
-- (void)presentNewUserViewController {
-    WeWalkNewUserControllerViewController *newViewController = [[WeWalkNewUserControllerViewController alloc] initWithNibName:nil bundle:nil];
-    newViewController.delegate = self;
-    [self.navigationController presentViewController:newViewController animated:YES completion:nil];
-}
+//- (void)presentNewUserViewController {
+//    WeWalkNewUserControllerViewController *newViewController = [[WeWalkNewUserControllerViewController alloc] initWithNibName:nil bundle:nil];
+//    newViewController.delegate = self;
+//    [self.navigationController presentViewController:newViewController animated:YES completion:nil];
+//}
 
 @end

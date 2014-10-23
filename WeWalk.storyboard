@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="AOD-Km-7pn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="yqj-Lu-3X0">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5s-MB-9KB">
-                                <rect key="frame" x="80" y="212" width="160" height="143"/>
+                                <rect key="frame" x="80" y="207" width="160" height="143"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
                                 <state key="normal" title="Start Workout" backgroundImage="orange_banner@1x">
@@ -39,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZf-sJ-3SD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="903" y="11"/>
+            <point key="canvasLocation" x="1429" y="11"/>
         </scene>
         <!--Workout View Controller-->
         <scene sceneID="OAz-Kx-wBt">
@@ -85,12 +85,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Vm-LR-IXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1405" y="11"/>
+            <point key="canvasLocation" x="1931" y="11"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="WWM-td-FR4">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="yqj-Lu-3X0" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Jvm-0B-awO">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="AOD-Km-7pn" kind="relationship" relationship="viewControllers" id="1jv-gm-ggO"/>
+                        <segue destination="K5u-3j-t3a" kind="relationship" relationship="viewControllers" id="ka5-lK-IqI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bk4-X6-rwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204" y="355"/>
+        </scene>
+        <!--Navigation Controller - Item-->
         <scene sceneID="nGT-Hg-feq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AOD-Km-7pn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="zTI-3I-Huf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tbR-Qo-jJI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -103,7 +123,34 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rwi-fK-3Yz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="377" y="11"/>
+            <point key="canvasLocation" x="903" y="11"/>
+        </scene>
+        <!--Post Event View Controller - Item-->
+        <scene sceneID="bJy-xU-b9J">
+            <objects>
+                <viewController id="K5u-3j-t3a" customClass="PostEventViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YWG-gc-3f0"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hs6-b3-heo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LAZ-QT-wkb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Begin working on post event! This is the post event view" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJz-uK-Ksn">
+                                <rect key="frame" x="5" y="58" width="432" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Odo-MO-qHY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l1Z-5f-x9H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="901" y="810"/>
         </scene>
     </scenes>
     <resources>

@@ -82,12 +82,12 @@
 //                                                         UIRemoteNotificationTypeAlert |
 //                                                         UIRemoteNotificationTypeSound)];
 //    }
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"WeWalk" bundle:[NSBundle mainBundle]];
-    UIViewController *vc = [storyboard instantiateInitialViewController];
-    
-    // Set root view controller and make windows visible
-    self.window.rootViewController = vc;
-    [self.window makeKeyAndVisible];
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"WeWalk" bundle:[NSBundle mainBundle]];
+//    UIViewController *vc = [storyboard instantiateInitialViewController];
+//    
+//    // Set root view controller and make windows visible
+//    self.window.rootViewController = vc;
+//    [self.window makeKeyAndVisible];
     
     return YES;
 }
@@ -107,12 +107,12 @@
 
  */
 
-- (void)presentLoginViewController {
-    // Go to the welcome screen and have them log in or create an account.
-    WeWalkSignInController *viewController = [[WeWalkSignInController alloc] initWithNibName:nil bundle:nil];
-    viewController.delegate = self;
-    [self.navigationController setViewControllers:@[ viewController ] animated:NO];
-}
+//- (void)presentLoginViewController {
+//    // Go to the welcome screen and have them log in or create an account.
+//    WeWalkSignInController *viewController = [[WeWalkSignInController alloc] initWithNibName:nil bundle:nil];
+//    viewController.delegate = self;
+//    [self.navigationController setViewControllers:@[ viewController ] animated:NO];
+//}
 
 - (void)loginViewControllerDidLogin:(WeWalkSignInController *)controller {
     //TODO:complete

@@ -25,6 +25,7 @@
 		0A58E50319F63D5A006A8E67 /* ParseUserDataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A58E50219F63D5A006A8E67 /* ParseUserDataAccessor.m */; };
 		2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCDD6AF14A573F500295AAC /* QuartzCore.framework */; };
 		4998650515BF305000803E05 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4998650415BF305000803E05 /* StoreKit.framework */; };
+		5503B26919F87A7B000375ED /* PostEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5503B26819F87A7B000375ED /* PostEventViewController.m */; };
 		5506752319F4BF7400BBFBA7 /* WeWalkSignInController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5506752119F4BF7400BBFBA7 /* WeWalkSignInController.m */; };
 		5506752419F4BF7400BBFBA7 /* WeWalkSignInController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5506752219F4BF7400BBFBA7 /* WeWalkSignInController.xib */; };
 		5506752719F4C34100BBFBA7 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5506752619F4C34100BBFBA7 /* Image.xcassets */; };
@@ -74,6 +75,8 @@
 		0A58E50219F63D5A006A8E67 /* ParseUserDataAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseUserDataAccessor.m; sourceTree = "<group>"; };
 		2FCDD6AF14A573F500295AAC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4998650415BF305000803E05 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		5503B26719F87A7B000375ED /* PostEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostEventViewController.h; path = ParseStarterProject/PostEventViewController.h; sourceTree = "<group>"; };
+		5503B26819F87A7B000375ED /* PostEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostEventViewController.m; path = ParseStarterProject/PostEventViewController.m; sourceTree = "<group>"; };
 		5506752019F4BF7400BBFBA7 /* WeWalkSignInController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeWalkSignInController.h; path = Controller/WeWalkSignInController.h; sourceTree = "<group>"; };
 		5506752119F4BF7400BBFBA7 /* WeWalkSignInController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeWalkSignInController.m; path = Controller/WeWalkSignInController.m; sourceTree = "<group>"; };
 		5506752219F4BF7400BBFBA7 /* WeWalkSignInController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WeWalkSignInController.xib; path = Controller/WeWalkSignInController.xib; sourceTree = "<group>"; };
@@ -140,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				5545B43019F63A22003215C7 /* WeWalk.storyboard */,
+				5503B26719F87A7B000375ED /* PostEventViewController.h */,
+				5503B26819F87A7B000375ED /* PostEventViewController.m */,
 				554D0C8619F72F2E0017DA5A /* CoreLocationController.h */,
 				554D0C8719F72F2E0017DA5A /* CoreLocationController.m */,
 				55C6372319F725C100FDC452 /* WorkoutViewController.h */,
@@ -377,6 +382,7 @@
 				5506753819F4E3EF00BBFBA7 /* WeWalkDataAccessor.m in Sources */,
 				5506752319F4BF7400BBFBA7 /* WeWalkSignInController.m in Sources */,
 				554D0C8819F72F2E0017DA5A /* CoreLocationController.m in Sources */,
+				5503B26919F87A7B000375ED /* PostEventViewController.m in Sources */,
 				09ABC08813A1D52E009C3FCF /* ParseStarterProjectViewController.m in Sources */,
 				5506753B19F4E41200BBFBA7 /* UserDataAccessor.m in Sources */,
 			);

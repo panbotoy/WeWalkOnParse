@@ -1,18 +1,18 @@
 //
-//  MainViewController.m
+//  PostEventViewController.m
 //  ParseStarterProject
 //
-//  Created by Stella Mao on 10/21/14.
+//  Created by Stella Mao on 10/22/14.
 //
 //
 
-#import "MainViewController.h"
+#import "PostEventViewController.h"
 
-@interface MainViewController ()
+@interface PostEventViewController ()
 
 @end
 
-@implementation MainViewController
+@implementation PostEventViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,8 +27,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,13 +34,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (IBAction)startWorkoutButtonPressed:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"startWorkoutSegue" sender:self];
-}
-
-
-
 
 /*
 #pragma mark - Navigation
