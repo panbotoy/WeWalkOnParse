@@ -15,4 +15,5 @@
 @property (strong, nonatomic) IBOutlet MKMapView *workoutMap;
 @property (strong, nonatomic) IBOutlet UILabel *lblLatitude;
 @property (strong, nonatomic) IBOutlet UILabel *lblLongitude;
+@property (weak, nonatomic) IBOutlet UIButton *TestButton;
 @end
