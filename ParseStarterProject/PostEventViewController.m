@@ -17,6 +17,7 @@
 @property (nonatomic, strong) HYTextField *locationField;
 @property (nonatomic, strong) HYTextField *descriptionField;
 @property (nonatomic, strong) UIButton *postButton;
+@property (strong, nonatomic) UITapGestureRecognizer *tapRecognizer;
 
 @end
 
@@ -36,6 +37,32 @@
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.postButton];
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    
+    [nc addObserver:self selector:@selector(keyboardWillShow:) name:
+     UIKeyboardWillShowNotification object:nil];
+    
+    [nc addObserver:self selector:@selector(keyboardWillHide:) name:
+     UIKeyboardWillHideNotification object:nil];
+    
+    self.tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                 action:@selector(didTapAnywhere:)];
+}
+
+-(void) keyboardWillShow:(NSNotification *) note {
+    [self.view addGestureRecognizer:self.tapRecognizer];
+}
+
+-(void) keyboardWillHide:(NSNotification *) note
+{
+    [self.view removeGestureRecognizer:self.tapRecognizer];
+}
+
+-(void)didTapAnywhere: (UITapGestureRecognizer*) recognizer {
+    [self.titleField resignFirstResponder];
+    [self.timeField resignFirstResponder];
+    [self.locationField resignFirstResponder];
+    [self.descriptionField resignFirstResponder];
 }
 
 #pragma mark - DataSource methods implementation
@@ -117,8 +144,10 @@
     if (!_tableView) {
         CGFloat tableMargin = (self.view.frame.size.width - [self tableWidth]) / 2;
         CGFloat tableHeight = [self inputCellHeight] * [self tableView: _tableView numberOfRowsInSection:0];
-        CGFloat tableTopMargin = (self.view.frame.size.height - tableHeight) / 2;
-        CGRect tableFrame = CGRectMake(tableMargin, tableTopMargin, [self tableWidth], tableHeight);
+        //NSLog(@"Table height is %d", tableHeight);
+        //CGFloat tableTopMargin = (self.view.frame.size.height - tableHeight) / 2;
+        //NSLog(@"The top margin is %d", tableTopMargin);
+        CGRect tableFrame = CGRectMake(tableMargin, 160.0f, [self tableWidth], tableHeight);
         
         _tableView = [[UITableView alloc] initWithFrame:tableFrame];
         _tableView.backgroundColor = [UIColor whiteColor];
@@ -176,8 +205,9 @@
 
 - (UIButton *) postButton
 {
-    if (_postButton) {
+    if (!_postButton) {
         _postButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        //NSLog(@"table view height is %d", self.tableView.frame.size.height);
         _postButton.frame = CGRectMake(self.tableView.frame.origin.x, self.tableView.frame.origin.y + self.tableView.frame.size.height, [self tableWidth], [self inputCellHeight]);
         _postButton.backgroundColor = [UIColor orangeColor];
         [_postButton.titleLabel setFont:[UIFont boldSystemFontOfSize:18.0f]];
