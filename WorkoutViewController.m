@@ -30,7 +30,14 @@
     // Do any additional setup after loading the view.
     self.workoutMap.showsUserLocation = YES;
     self.locationController = [[CoreLocationController alloc] init];
-	self.locationController.delegate = self;
+	self.locationController.delegate = self;  //set this workoutViewController as the CoreLocationController Delegate
+    self.workoutMap.delegate = self; // set this WorkOutViewController as the MKMapDelegate
+    
+    MKUserLocation *userLocation = self.workoutMap.userLocation;
+    MKCoordinateRegion region =
+    MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate,
+                                       2000, 2000);
+    [self.workoutMap setRegion:region animated:YES];
 	[self.locationController.locationManager startUpdatingLocation];
 }
 
@@ -58,7 +65,8 @@
     MKMapItem *_srcItem = [[MKMapItem alloc] initWithPlacemark:_srcMark];
     
     
-    CLLocationCoordinate2D _dstCoord = CLLocationCoordinate2DMake(34.0500,-118.2500);
+    CLLocationCoordinate2D _dstCoord = CLLocationCoordinate2DMake(37.7834,-122.4168);
+    
     MKPlacemark *_dstMark = [[MKPlacemark alloc] initWithCoordinate:_dstCoord addressDictionary:nil];
     MKMapItem *_dstItem = [[MKMapItem alloc] initWithPlacemark:_dstMark];
     [self findDirectionsFrom: _srcItem to: _dstItem];
@@ -70,11 +78,11 @@
 {
     //provide loading animation here
     
-    MKDirectionsRequest*request=[[MKDirectionsRequest alloc] init];
-    request.source=source;
-    request.transportType=MKDirectionsTransportTypeAutomobile;
-    request.destination=destination;
-    MKDirections*directions=[[MKDirections alloc] initWithRequest:request];
+    MKDirectionsRequest* request = [[MKDirectionsRequest alloc] init];
+    request.source = source;
+    request.transportType = MKDirectionsTransportTypeAutomobile;
+    request.destination = destination;
+    MKDirections* directions = [[MKDirections alloc] initWithRequest:request];
     //__blocktypeof(self)weakSelf=self;
     [directions calculateDirectionsWithCompletionHandler:
      ^(MKDirectionsResponse*response,NSError*error){
@@ -90,7 +98,14 @@
          }
      }];
 }
-
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay
+{
+    MKPolylineRenderer *renderer =
+    [[MKPolylineRenderer alloc] initWithOverlay:overlay];
+    renderer.strokeColor = [UIColor blueColor];
+    renderer.lineWidth = 5.0;
+    return renderer;
+}
 /*
  #pragma mark - Navigation
  

@@ -10,7 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "CoreLocationController.h"
 
-@interface WorkoutViewController : UIViewController <CoreLocationControllerDelegate>
+@interface WorkoutViewController : UIViewController <CoreLocationControllerDelegate, MKMapViewDelegate>
 @property (nonatomic, retain) CoreLocationController *locationController;
 @property (strong, nonatomic) IBOutlet MKMapView *workoutMap;
 @property (strong, nonatomic) IBOutlet UILabel *lblLatitude;
