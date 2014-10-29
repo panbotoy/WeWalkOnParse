@@ -8,6 +8,7 @@
 
 #import "PostEventViewController.h"
 #import "HYTextField.h"
+#import <Parse/Parse.h>
 
 @interface PostEventViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
@@ -126,15 +127,22 @@
 
 -(void) postButtonTapped: (id)sender
 {
-    NSDictionary *formValues = @{ @"Event Title" : self.titleField.text,
-                                  @"Time" : self.timeField.text,
-                                  @"Location" : self.locationField.text,
-                                  @"Description" : self.descriptionField.text};
-    
-    NSString *alertMessage = [NSString stringWithFormat:@"%@", formValues];
-    
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:alertMessage delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-    [alert show];
+//    NSDictionary *formValues = @{ @"Event Title" : self.titleField.text,
+//                                  @"Time" : self.timeField.text,
+//                                  @"Location" : self.locationField.text,
+//                                  @"Description" : self.descriptionField.text};
+//    
+//    NSString *alertMessage = [NSString stringWithFormat:@"%@", formValues];
+//    
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:alertMessage delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+//    [alert show];
+    PFObject *eventObj = [PFObject objectWithClassName:@"Event"];
+    eventObj[@"userId"] = @"testUser";
+    eventObj[@"eventTitle"] = self.titleField.text;
+    eventObj[@"eventTime"] = self.timeField.text;
+    eventObj[@"eventLocation"] = self.locationField.text;
+    eventObj[@"description"] = self.descriptionField.text;
+    [eventObj saveInBackground];
 }
 
 #pragma mark - Property Accessors
@@ -151,7 +159,7 @@
         
         _tableView = [[UITableView alloc] initWithFrame:tableFrame];
         _tableView.backgroundColor = [UIColor whiteColor];
-        _tableView.scrollEnabled = NO;
+        _tableView.scrollEnabled = YES;
         _tableView.backgroundView = nil;
         _tableView.layer.borderColor = [[UIColor grayColor] CGColor];
         // a slim border

@@ -36,6 +36,8 @@
 		554CD5F019F4E8A800A37513 /* WeWalkNewUserControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554CD5EE19F4E8A800A37513 /* WeWalkNewUserControllerViewController.m */; };
 		554CD5F119F4E8A800A37513 /* WeWalkNewUserControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554CD5EF19F4E8A800A37513 /* WeWalkNewUserControllerViewController.xib */; };
 		554D0C8819F72F2E0017DA5A /* CoreLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554D0C8719F72F2E0017DA5A /* CoreLocationController.m */; };
+		555F18A51A0055470095F743 /* HYImageTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 555F18A41A0055470095F743 /* HYImageTextLabel.m */; };
+		55605D2A19FF6772002F0EEA /* WorkoutTextSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55605D2919FF6772002F0EEA /* WorkoutTextSummaryViewController.m */; };
 		55BC851E19FCC0DE00935095 /* HYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC851D19FCC0DE00935095 /* HYTextField.m */; };
 		55C6372219F722FA00FDC452 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C6372119F722FA00FDC452 /* MainViewController.m */; };
 		55C6372519F725C100FDC452 /* WorkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C6372419F725C100FDC452 /* WorkoutViewController.m */; };
@@ -94,6 +96,10 @@
 		554CD5EF19F4E8A800A37513 /* WeWalkNewUserControllerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WeWalkNewUserControllerViewController.xib; path = Controller/WeWalkNewUserControllerViewController.xib; sourceTree = "<group>"; };
 		554D0C8619F72F2E0017DA5A /* CoreLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLocationController.h; sourceTree = "<group>"; };
 		554D0C8719F72F2E0017DA5A /* CoreLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLocationController.m; sourceTree = "<group>"; };
+		555F18A31A0055470095F743 /* HYImageTextLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYImageTextLabel.h; sourceTree = "<group>"; };
+		555F18A41A0055470095F743 /* HYImageTextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYImageTextLabel.m; sourceTree = "<group>"; };
+		55605D2819FF6772002F0EEA /* WorkoutTextSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutTextSummaryViewController.h; sourceTree = "<group>"; };
+		55605D2919FF6772002F0EEA /* WorkoutTextSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutTextSummaryViewController.m; sourceTree = "<group>"; };
 		55BC851C19FCC0DE00935095 /* HYTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HYTextField.h; path = HYTextField/HYTextField.h; sourceTree = "<group>"; };
 		55BC851D19FCC0DE00935095 /* HYTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HYTextField.m; path = HYTextField/HYTextField.m; sourceTree = "<group>"; };
 		55C6372019F722FA00FDC452 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ParseStarterProject/MainViewController.h; sourceTree = "<group>"; };
@@ -145,8 +151,11 @@
 		09ABC06213A1D52D009C3FCF = {
 			isa = PBXGroup;
 			children = (
+				55605D2B19FF6E5A002F0EEA /* HYImageTextLabel */,
 				55BC851B19FCC05800935095 /* HYTextField */,
 				5545B43019F63A22003215C7 /* WeWalk.storyboard */,
+				55605D2819FF6772002F0EEA /* WorkoutTextSummaryViewController.h */,
+				55605D2919FF6772002F0EEA /* WorkoutTextSummaryViewController.m */,
 				5503B26719F87A7B000375ED /* PostEventViewController.h */,
 				5503B26819F87A7B000375ED /* PostEventViewController.m */,
 				554D0C8619F72F2E0017DA5A /* CoreLocationController.h */,
@@ -305,6 +314,15 @@
 			name = xib;
 			sourceTree = "<group>";
 		};
+		55605D2B19FF6E5A002F0EEA /* HYImageTextLabel */ = {
+			isa = PBXGroup;
+			children = (
+				555F18A31A0055470095F743 /* HYImageTextLabel.h */,
+				555F18A41A0055470095F743 /* HYImageTextLabel.m */,
+			);
+			name = HYImageTextLabel;
+			sourceTree = "<group>";
+		};
 		55BC851B19FCC05800935095 /* HYTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,6 +409,7 @@
 				09ABC07F13A1D52D009C3FCF /* main.m in Sources */,
 				55C6372219F722FA00FDC452 /* MainViewController.m in Sources */,
 				0A58E50319F63D5A006A8E67 /* ParseUserDataAccessor.m in Sources */,
+				555F18A51A0055470095F743 /* HYImageTextLabel.m in Sources */,
 				09ABC08213A1D52D009C3FCF /* ParseStarterProjectAppDelegate.m in Sources */,
 				5506753819F4E3EF00BBFBA7 /* WeWalkDataAccessor.m in Sources */,
 				5506752319F4BF7400BBFBA7 /* WeWalkSignInController.m in Sources */,
@@ -398,6 +417,7 @@
 				55BC851E19FCC0DE00935095 /* HYTextField.m in Sources */,
 				5503B26919F87A7B000375ED /* PostEventViewController.m in Sources */,
 				09ABC08813A1D52E009C3FCF /* ParseStarterProjectViewController.m in Sources */,
+				55605D2A19FF6772002F0EEA /* WorkoutTextSummaryViewController.m in Sources */,
 				5506753B19F4E41200BBFBA7 /* UserDataAccessor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
