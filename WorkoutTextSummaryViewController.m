@@ -29,8 +29,10 @@
     [super viewDidLoad];
     HYImageTextLabel *cView = [[HYImageTextLabel alloc] initWithFrame:CGRectMake(20, 50, 200, 34) withImage:[UIImage imageNamed:@"walking"] withLabel:@"Speed"];
     HYImageTextLabel *dView = [[HYImageTextLabel alloc] initWithFrame:CGRectMake(20, 75, 200, 34) withImage:[UIImage imageNamed:@"clock"] withLabel:@"Duration"];
+    HYImageTextLabel *fView = [[HYImageTextLabel alloc] initWithFrame:CGRectMake(20, 100, 200, 34) withImage:[UIImage imageNamed:@"route"] withLabel:@"Distance"];
     [self.view addSubview:cView];
     [self.view addSubview:dView];
+    [self.view addSubview:fView];
 }
 
 - (void)didReceiveMemoryWarning
