@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="yqj-Lu-3X0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Tnr-g5-DY4">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -10,8 +10,8 @@
             <objects>
                 <viewController id="WSN-qO-zpA" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QXf-Pc-08e"/>
-                        <viewControllerLayoutGuide type="bottom" id="y77-wc-JIe"/>
+                        <viewControllerLayoutGuide type="top" id="exY-iG-fqf"/>
+                        <viewControllerLayoutGuide type="bottom" id="2tm-Hn-NvJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WBx-Wa-mIT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -46,8 +46,8 @@
             <objects>
                 <viewController id="g67-af-HbG" customClass="WorkoutViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="V8N-GF-q6J"/>
-                        <viewControllerLayoutGuide type="bottom" id="3tQ-UU-0uZ"/>
+                        <viewControllerLayoutGuide type="top" id="TGi-pB-ypc"/>
+                        <viewControllerLayoutGuide type="bottom" id="QfT-1v-Xl1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="02W-nC-uJa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -141,8 +141,8 @@
             <objects>
                 <viewController id="K5u-3j-t3a" customClass="PostEventViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="YWG-gc-3f0"/>
-                        <viewControllerLayoutGuide type="bottom" id="Hs6-b3-heo"/>
+                        <viewControllerLayoutGuide type="top" id="bkn-W5-hqs"/>
+                        <viewControllerLayoutGuide type="bottom" id="73a-YE-dAt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LAZ-QT-wkb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -161,10 +161,70 @@
             </objects>
             <point key="canvasLocation" x="901" y="810"/>
         </scene>
+        <!--Workout Text Summary View Controller-->
+        <scene sceneID="hxv-IU-lD1">
+            <objects>
+                <viewController id="Tnr-g5-DY4" customClass="WorkoutTextSummaryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BEG-Uv-0OP"/>
+                        <viewControllerLayoutGuide type="bottom" id="Utt-JL-tSE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TFM-1X-DMw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pie-5I-ht5">
+                                <rect key="frame" x="52" y="288" width="56" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="18"/>
+                                <color key="textColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="walking" translatesAutoresizingMaskIntoConstraints="NO" id="W0Y-zX-LOM">
+                                <rect key="frame" x="20" y="292" width="34" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOK-oC-e6U">
+                                <rect key="frame" x="52" y="334" width="56" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="18"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="walking" translatesAutoresizingMaskIntoConstraints="NO" id="KcD-Rk-zGd">
+                                <rect key="frame" x="20" y="336" width="34" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PjJ-S6-I6g">
+                                <rect key="frame" x="52" y="380" width="56" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="18"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="walking" translatesAutoresizingMaskIntoConstraints="NO" id="Jbl-Uh-B96">
+                                <rect key="frame" x="20" y="382" width="34" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3zW-fh-C6v">
+                                <rect key="frame" x="20" y="433" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PRW-4I-Ncq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1452" y="810"/>
+        </scene>
     </scenes>
     <resources>
         <image name="h1" width="320" height="101"/>
         <image name="orange_banner@1x" width="320" height="140"/>
+        <image name="walking" width="34" height="34"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
