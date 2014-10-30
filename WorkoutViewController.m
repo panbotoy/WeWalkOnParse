@@ -33,13 +33,20 @@
 	self.locationController.delegate = self;  //set this workoutViewController as the CoreLocationController Delegate
     self.workoutMap.delegate = self; // set this WorkOutViewController as the MKMapDelegate
     
-    MKUserLocation *userLocation = self.workoutMap.userLocation;
-    MKCoordinateRegion region =
-    MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate,
-                                       2000, 2000);
-    [self.workoutMap setRegion:region animated:YES];
-	[self.locationController.locationManager startUpdatingLocation];
+	//[self.locationController.locationManager startUpdatingLocation];
+    //MKUserLocation *userLocation = self.workoutMap.userLocation;
+    //MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 1000, 1000);
+    //[self.workoutMap.];
 }
+
+-(void) viewWillAppear:(BOOL)animated {
+
+}
+
+-(void) viewDidAppear:(BOOL)animated {
+
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -65,11 +72,17 @@
     MKMapItem *_srcItem = [[MKMapItem alloc] initWithPlacemark:_srcMark];
     
     
-    CLLocationCoordinate2D _dstCoord = CLLocationCoordinate2DMake(37.7834,-122.4168);
+    CLLocationCoordinate2D _dstCoord = CLLocationCoordinate2DMake(37.7844,-122.4177);
     
     MKPlacemark *_dstMark = [[MKPlacemark alloc] initWithCoordinate:_dstCoord addressDictionary:nil];
     MKMapItem *_dstItem = [[MKMapItem alloc] initWithPlacemark:_dstMark];
+    
+    CLLocationCoordinate2D _dst2Coord = CLLocationCoordinate2DMake(37.7855,-122.4188);
+    
+    MKPlacemark *_dst2Mark = [[MKPlacemark alloc] initWithCoordinate:_dst2Coord addressDictionary:nil];
+    MKMapItem *_dst2Item = [[MKMapItem alloc] initWithPlacemark:_dst2Mark];
     [self findDirectionsFrom: _srcItem to: _dstItem];
+    [self findDirectionsFrom: _dstItem to: _dst2Item];
 }
 
 
@@ -105,6 +118,12 @@
     renderer.strokeColor = [UIColor blueColor];
     renderer.lineWidth = 5.0;
     return renderer;
+}
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation NS_AVAILABLE(10_9, 4_0) {
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 1000, 1000);
+    [self.workoutMap setRegion:region animated:NO];
+    
 }
 /*
  #pragma mark - Navigation
